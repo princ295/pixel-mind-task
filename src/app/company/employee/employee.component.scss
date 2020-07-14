@@ -1,0 +1,18 @@
+.title{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    h1{
+        font-family: auto;
+    }
+}
+.form_element{
+    position: relative;
+    .button{
+        margin-top: 5px;
+        right: 30px;
+        position: absolute;
+    }
+}

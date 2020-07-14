@@ -1,0 +1,110 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "name": "prince dewangan",
+      "email": "dewanganprince02@gmail.com",
+      "department": "Developement",
+      "gender": "Male",
+      "phone": "987456123",
+      "age": 21,
+      "address": "raipur chhattisgrh",
+      "technology": [
+        "Angular",
+        "React",
+        "Python"
+      ]
+    },
+    {
+      "name": "ravikant",
+      "email": "rdewangan@gmail.com",
+      "department": "Developement",
+      "gender": "Male",
+      "phone": "7889455612",
+      "age": 20,
+      "address": "madivala maruti nagar bangalore",
+      "technology": [
+        "Reactjs",
+        "Vuejs",
+        "Nodejs"
+      ],
+      "id": 2
+    },
+    {
+      "name": "sohan",
+      "email": "s@gmail.com",
+      "department": "Testing",
+      "gender": "Male",
+      "phone": "7894561230",
+      "age": 24,
+      "address": "madivala bangalore",
+      "technology": [
+        "Python",
+        "Angular"
+      ],
+      "id": 3
+    },
+    {
+      "name": "sunny",
+      "email": "sunny@gmail.com",
+      "department": "Developement",
+      "gender": "Male",
+      "phone": "7845128956",
+      "age": 20,
+      "address": "s.r nagar hydrabad",
+      "technology": [
+        "Deno",
+        "Reactjs",
+        "Vuejs",
+        "Nodejs"
+      ],
+      "id": 4
+    },
+    {
+      "name": "pooja",
+      "email": "pooja@gmail.com",
+      "department": "Testing",
+      "gender": "",
+      "phone": "7845568945",
+      "age": 20,
+      "address": "jkhjkhja",
+      "technology": [
+        "Reactjs",
+        "Vuejs",
+        "Nodejs"
+      ],
+      "id": 5
+    },
+    {
+      "name": "surya dewangan",
+      "email": "surya@gmail.com",
+      "department": "Testing",
+      "gender": "Male",
+      "phone": "7845127845",
+      "age": 18,
+      "address": "raipur",
+      "technology": [
+        "Reactjs",
+        "Vuejs",
+        "Nodejs"
+      ],
+      "id": 6
+    },
+    {
+      "name": "pallavi",
+      "email": "pa@gmail.com",
+      "department": "Developement",
+      "gender": "Male",
+      "phone": "7889451278",
+      "age": 18,
+      "address": "hydra",
+      "technology": [
+        "Angular",
+        "Reactjs",
+        "Vuejs",
+        "Nodejs"
+      ],
+      "id": 7
+    }
+  ]
+}

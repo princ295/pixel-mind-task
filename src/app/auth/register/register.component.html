@@ -1,0 +1,77 @@
+<br><br><br><br><br><br><br>
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="title">
+            <h1>Sign Up</h1>
+            <h2>→</h2>
+
+            <a [routerLink]="['/A/login']"><h2>Go To Login →</h2></a>
+            <!-- <a [routerLink]="['/E/info']">Employee</a>&nbsp;
+            <a [routerLink]="['/E/detail']">Employee Detail</a> -->
+        </div>
+
+    </div>
+    <div class="col-md-5 form_element">
+        <form [formGroup]="register" (ngSubmit)="onSubmit()">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" placeholder="first name"  class="form-control" formControlName="fname" 
+                            [ngClass]="{ 'is-invalid': submit && f.fname.errors }"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <div *ngIf="submit && f.fname.errors" class="invalid-feedback">
+                                <div *ngIf="f.fname.errors.required" class="text_warning">User is required</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" placeholder="last name"  formControlName="lname" 
+                            [ngClass]="{ 'is-invalid': submit && f.lname.errors }"
+                            class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <div *ngIf="submit && f.lname.errors" class="invalid-feedback">
+                                <div *ngIf="f.lname.errors.required" class="text_warning">User is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" placeholder="email"  formControlName="email" 
+                    [ngClass]="{ 'is-invalid': submit && f.email.errors }"
+                    class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <div *ngIf="submit && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required" class="text_warning">Email is required</div>
+                        <div *ngIf="f.email.errors.email" class="text_warning">Email must be a valid email address</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="password" placeholder="password"  formControlName="password"
+                    [ngClass]="{ 'is-invalid': submit && f.password.errors }"
+                    class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <div *ngIf="submit && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required" class="text_warning">password must be at least 8 digit </div>
+                        <div *ngIf="f.password.errors.minlength" class="text_warning">Password allow only number and character & Password must be at least 8 digit</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 button">
+                <button class="btn btn-primary" type="submit" >Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+

@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## To run project
+1. clone the repo 
+
+2. run command "npm i"
+
+3. run json-server --watch db.json
+
+4. run json-server --watch db1.json

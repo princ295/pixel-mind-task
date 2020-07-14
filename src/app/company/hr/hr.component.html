@@ -1,0 +1,79 @@
+<div class="container">
+    <h5 style="color: red;" (click)="logout()">Logoute</h5>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="">Select Department</label>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group input-group-sm mb-3">
+                    <select  class="form-control form-control-sm" (change)="onChange($event)">
+                        <option *ngFor="let i of _" [ngValue]="i.name">{{i.name}}</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="col-md-5">
+                <div #tech class="row" style="display: none">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="checkbox">
+                                <label><input type="checkbox" (change)="on_Change($event)" value="Angular">Angular</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="checkbox">
+                                <label><input type="checkbox" (change)="on_Change($event)" value="React">Reactjs</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="checkbox">
+                                <label><input type="checkbox" (change)="on_Change($event)" value="Vuejs">Vuejs</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="checkbox">
+                                <label><input type="checkbox" (change)="on_Change($event)" value="Nodejs">Node</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="checkbox">
+                                <label><input type="checkbox" (change)="on_Change($event)" value="Python">Python</label>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-2">
+                            <div class="checkbox">
+                                <label><input type="checkbox" (change)="on_Change($event)" value="Deno">Deno</label>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" (click)="getinfo('doughnut')">Doughnut Chart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="getinfo('radar')">Radar Chart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="getinfo('pie')">Pie Chart</a>
+      </li>
+    </ul>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <div>
+        <div style="display: block">
+             <canvas baseChart
+              [data]="data"
+              [labels]="label"
+              [chartType]="type"></canvas>
+        </div>
+    </div>
+</div>

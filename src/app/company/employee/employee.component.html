@@ -1,0 +1,126 @@
+<br>
+<h5 style="color: red;" (click)="logout()">Logoute</h5>
+<div class="row">
+    <div class="col-md-7">
+
+        <div class="title">
+            <h1>Employee Registration</h1>
+            <h2>→</h2>
+
+            <a [routerLink]="['/E/detail']"><h2>Go To Employee List Details →</h2></a>
+            <!-- <a [routerLink]="['/E/info']">Employee</a>&nbsp;
+            <a [routerLink]="['/E/detail']">Employee Detail</a> -->
+        </div>
+
+    </div>
+    <div class="col-md-5 form_element">
+      <div class="col-md-12">
+        <label for="">Name</label>
+        <div class="input-group input-group-sm mb-3">
+            <input type="text" placeholder="prince dewangna"  [(ngModel)]="obj.name"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <label for="">Mobile No.</label>
+        <div class="input-group input-group-sm mb-3">
+            <input type="text" placeholder="9874565123" [(ngModel)]="obj.phone"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label for="">Email</label>
+        <div class="input-group input-group-sm mb-3">
+            <input type="email" placeholder="dewanganprince02@gmail.com" [(ngModel)]="obj.email"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+      </div>
+
+      <!-- department -->
+      <div class="col-md-12">
+        <label for="">Department</label>
+        <div class="input-group input-group-sm mb-3">
+            <select  class="form-control form-control-sm" [(ngModel)]="obj.department" >
+                <option *ngFor="let i of _" [ngValue]="i.name">{{i.name}}</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="">Gender</label>
+            </div>
+            <div class="col-md-4">
+                <div class="form-check">
+                    <label>Male</label>&nbsp;&nbsp;&nbsp; &nbsp;
+                    <input class="form-check-input position-static" type="radio" name="Male" id="Male" [(ngModel)]="obj.gender" value="Male" aria-label="...">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-check">
+                    <label>Female</label>&nbsp;&nbsp;&nbsp; &nbsp;
+                    <input class="form-check-input position-static" type="radio" name="Female" id="Female" [(ngModel)]="obj.gender" value="Female" aria-label="...">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+        <div class="col-md-2">
+            <label for="">Age</label>
+        </div>
+        <div class="col-md-10">
+            <select  class="form-control form-control-sm" [(ngModel)]="obj.age" >
+                <option *ngFor="let i of list" [ngValue]="i">{{i}}</option>
+            </select>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <label for="">Address</label>
+        <div class="form-group">
+            <textarea class="form-control" [(ngModel)]="obj.address" placeholder="Address of your location" rows="3"></textarea>
+          </div>
+      </div>
+
+      <div class="col-md-12">
+          <label>Technology</label>
+          <div class="row">
+            <div class="col-md-2">
+                <div class="checkbox">
+                    <label><input type="checkbox" (change)="onChange($event)" value="Angular">Angular</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox">
+                    <label><input type="checkbox" (change)="onChange($event)" value="Reactjs">Reactjs</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox">
+                    <label><input type="checkbox" (change)="onChange($event)" value="Vuejs">Vuejs</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox">
+                    <label><input type="checkbox" (change)="onChange($event)" value="Nodejs">Nodejs</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="checkbox">
+                    <label><input type="checkbox" (change)="onChange($event)" value="Python">Python</label>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="checkbox">
+                    <label><input type="checkbox" (change)="onChange($event)" value="Deno">Deno</label>
+                </div>
+            </div>
+          </div>
+      </div>
+    
+      <div class="button" >
+        <button class="btn btn-primary" (click)="onSubmit()" >Submit</button>
+      </div>
+    </div>
+</div>

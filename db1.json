@@ -1,0 +1,25 @@
+{
+  "User": [
+    {
+      "fname": "Prince",
+      "lname": "Dewangan",
+      "email": "dewanganprince02@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "fname": "roshan",
+      "lname": "Dewangan",
+      "email": "roshan@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "fname": "amit",
+      "lname": "Dewangan",
+      "email": "adewangan@gmail.com",
+      "password": "12345",
+      "id": 3
+    }
+  ]
+}

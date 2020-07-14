@@ -1,0 +1,51 @@
+<br><br><br><br><br><br><br><br>
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="title">
+            <h1>Login</h1>
+            <h2>→</h2>
+
+            <a [routerLink]="['/A/registration']"><h2>Go To Register →</h2></a>
+            <!-- <a [routerLink]="['/E/info']">Employee</a>&nbsp;
+            <a [routerLink]="['/E/detail']">Employee Detail</a> -->
+        </div>
+
+    </div>
+    <div class="col-md-5 form_element">
+        <form [formGroup]="login" (ngSubmit)="onSubmit()">
+    
+            <div class="col-md-12">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="text" placeholder="email"  formControlName="email" 
+                    [ngClass]="{ 'is-invalid': submit && f.email.errors }"
+                    class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <div *ngIf="submit && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required" class="text_warning">Email is required</div>
+                        <div *ngIf="f.email.errors.email" class="text_warning">Email must be a valid email address</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="input-group input-group-sm mb-3">
+                    <input type="password" placeholder="password"  formControlName="password"
+                    [ngClass]="{ 'is-invalid': submit && f.password.errors }"
+                    class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    <div *ngIf="submit && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required" class="text_warning">password required </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 button">
+                <button class="btn btn-primary" type="submit" >Login</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
